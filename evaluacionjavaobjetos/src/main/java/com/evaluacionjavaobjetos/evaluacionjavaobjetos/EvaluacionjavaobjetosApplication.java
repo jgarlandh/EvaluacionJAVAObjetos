@@ -44,7 +44,20 @@ public class EvaluacionjavaobjetosApplication {
 
 
 	//3.- dado un arreglo, obtener la mejor nota, la peor nota y el promedio
-
+	public static void gestionNota(ArrayList<Double> notas){
+		Double mayor =  notas.get(0);
+		Double menor = notas.get(0);
+		for(int i = 1; i < notas.size(); i++){
+			if(notas.get(i) > mayor){
+				mayor = notas.get(i);
+			}
+			if(notas.get(i) < menor){
+				menor = notas.get(i);
+			}
+		}
+		System.out.println("La nota más alta fué: " + mayor);
+		System.out.println("La nota más baja fué: " + menor);
+	}
 
 
 
