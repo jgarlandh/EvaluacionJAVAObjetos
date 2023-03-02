@@ -72,7 +72,7 @@ public class EvaluacionjavaobjetosApplication {
 			do {
 				System.out.println("Bienvenido!");
 				System.out.println("Ingrese '1' si quiere ver el promedio por alumno");
-				System.out.println("Ingrese '2' si quiere guardar un curso");
+				System.out.println("Ingrese '2' si quiere guardar alumnos en un curso");
 				System.out.println("Ingrese '3' si quiere guardar notas y evaluarlas");
 				System.out.println("Ingrese '0' para salir del menú");
 				System.out.print("Ingrese su opción: ");
@@ -120,7 +120,21 @@ public class EvaluacionjavaobjetosApplication {
 
 			}else if(userOption == 3){
 
-				
+				ArrayList<Double> notas = new ArrayList<Double>();
+				Double notaVar = 0.0;
+				System.out.print("Indique cantidad de notas a ingresar: ");
+				int cantNotas = Integer.parseInt(input.nextLine());
+				for(int i=0; i<cantNotas;i++){ 
+					do {
+						System.out.println("Ingrese nota nro "+(i+1));
+						System.out.print("Ingrese nota: ");
+						notaVar = Double.parseDouble(input.nextLine());
+						
+					} while (i>cantNotas);
+					notas.add(notaVar);
+				}
+
+				gestionNota(notas);
 
 			}
 
