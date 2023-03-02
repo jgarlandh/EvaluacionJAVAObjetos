@@ -116,6 +116,12 @@ public class EvaluacionjavaobjetosApplication {
 
 			}else if(userOption == 2){
 
+				gestionCurso();
+
+			}else if(userOption == 3){
+
+				
+
 			}
 
 
